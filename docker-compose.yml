@@ -16,7 +16,7 @@ services:
 
   s_contact_api:
     container_name: c_contact_api
-    image: hakanyalitekin/contactApi
+    image: hyalitekin/contactApi
     build: 
       context: .
       dockerfile: Services/ContactAPI/Contact.API/Dockerfile
@@ -28,7 +28,7 @@ services:
     
   s_reservation_api:
     container_name: c_reservation_api
-    image: hakanyalitekin/reservationApi
+    image: hyalitekin/reservationApi
     build: 
       context: .
       dockerfile: Services/ReservationAPI/Reservation.API/Dockerfile
@@ -39,8 +39,8 @@ services:
 
 
 networks:
-  int_net: # ContactApi ve ReservationApi'nin dýþ dünyaya açýk olmasýna gerek yok bundan sebet internel network oluþturuldu.
+  int_net:
     driver: overlay
     internal: true
-  micro_net: #Dýþ dünyaya açýk olan ApiGetWay'in network'ü
+  micro_net:
     driver: bridge
