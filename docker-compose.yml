@@ -18,7 +18,7 @@ services:
     container_name: c_contact_api
     image: hyalitekin/contactApi
     build: 
-      context: ./
+      context: Microservices/ .
       dockerfile: Services/ContactAPI/Contact.API/Dockerfile
     ports:
       - 9000:9000
@@ -30,7 +30,7 @@ services:
     container_name: c_reservation_api
     image: hyalitekin/reservationApi
     build: 
-      context: ./
+      context: Microservices/ .
       dockerfile: Services/ReservationAPI/Reservation.API/Dockerfile
     ports:
       - 9001:9001
