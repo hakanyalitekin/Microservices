@@ -16,7 +16,7 @@ services:
 
   s_contact_api:
     container_name: c_contact_api
-    image: hyalitekin/contactApi
+    image: hyalitekin/contactapi
     build: 
       context: .
       dockerfile: Services/ContactAPI/Contact.API/Dockerfile
@@ -28,7 +28,7 @@ services:
     
   s_reservation_api:
     container_name: c_reservation_api
-    image: hyalitekin/reservationApi
+    image: hyalitekin/reservationapi
     build: 
       context: .
       dockerfile: Services/ReservationAPI/Reservation.API/Dockerfile
