@@ -1,0 +1,33 @@
+{
+  "Routes": [
+    {
+
+      "DownstreamPathTemplate": "/api/Reservation/{BkgNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/r/{BkgNumber}",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/Contact/{Id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9000
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{Id}",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    }
+  ]
+}
