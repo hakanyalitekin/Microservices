@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.1'
 
 services:
   s_api_getway:
@@ -39,8 +39,8 @@ services:
 
 
 networks:
-  int_net: #ContactApi ve ReservationApi'nin dış dünyaya açık olmasına gerek yok bundan sebet internel network oluşturuldu.
+  int_net: #ContactApi ve ReservationApi'nin dÄ±ÅŸ dÃ¼nyaya aÃ§Ä±k olmasÄ±na gerek yok bundan sebet internel network oluÅŸturuldu.
     driver: overlay
     internal: true
-  micro_net: #Dış dünyaya açık olan ApiGetWay'in network'ü
+  micro_net: #DÄ±ÅŸ dÃ¼nyaya aÃ§Ä±k olan ApiGetWay'in network'Ã¼
     driver: bridge
