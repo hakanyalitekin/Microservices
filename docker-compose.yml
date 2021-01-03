@@ -3,7 +3,7 @@ version: '3.1'
 services:
   s_api_getway:
     container_name: c_api_getway
-    image: hakanyalitekin/apigeyway
+    image: hyalitekin/apigeyway
     build:
       context: .
       dockerfile: APIGateway/Dockerfile
@@ -16,7 +16,7 @@ services:
 
   s_contact_api:
     container_name: c_contact_api
-    image: hakanyalitekin/contactApi
+    image: hyalitekin/contactApi
     build: 
       context: .
       dockerfile: Services/ContactAPI/Contact.API/Dockerfile
@@ -28,7 +28,7 @@ services:
     
   s_reservation_api:
     container_name: c_reservation_api
-    image: hakanyalitekin/reservationApi
+    image: hyalitekin/reservationApi
     build: 
       context: .
       dockerfile: Services/ReservationAPI/Reservation.API/Dockerfile
