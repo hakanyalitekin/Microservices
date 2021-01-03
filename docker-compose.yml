@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 
 services:
   s_api_getway:
@@ -6,7 +6,7 @@ services:
     image: hakanyalitekin/apigeyway
     build:
       context: .
-      dockerfile: "APIGateway/Dockerfile"
+      dockerfile: APIGateway/Dockerfile
     ports:
       - 80:80
     networks:
@@ -19,7 +19,7 @@ services:
     image: hakanyalitekin/contactApi
     build: 
       context: .
-      dockerfile:  "Services/ContactAPI/Contact.API/Dockerfile"
+      dockerfile: Services/ContactAPI/Contact.API/Dockerfile
     ports:
       - 9000:9000
     networks:
@@ -31,7 +31,7 @@ services:
     image: hakanyalitekin/reservationApi
     build: 
       context: .
-      dockerfile:  "Services/ReservationAPI/Reservation.API/Dockerfile"
+      dockerfile: Services/ReservationAPI/Reservation.API/Dockerfile
     ports:
       - 9001:9001
     networks:
