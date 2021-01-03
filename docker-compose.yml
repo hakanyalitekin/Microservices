@@ -1,5 +1,4 @@
-version: '3.1'
-
+version: "3.1"
 
 services:
   s_api_getway:
@@ -7,7 +6,7 @@ services:
     image: hakanyalitekin/apigeyway
     build:
       context: .
-      dockerfile: APIGateway/Dockerfile
+      dockerfile: "APIGateway/Dockerfile"
     ports:
       - 80:80
     networks:
@@ -17,10 +16,10 @@ services:
 
   s_contact_api:
     container_name: c_contact_api
-    image: hyalitekin/contactApi
+    image: hakanyalitekin/contactApi
     build: 
       context: .
-      dockerfile: Services/ContactAPI/Contact.API/Dockerfile
+      dockerfile:  "Services/ContactAPI/Contact.API/Dockerfile"
     ports:
       - 9000:9000
     networks:
@@ -29,17 +28,18 @@ services:
     
   s_reservation_api:
     container_name: c_reservation_api
-    image: hyalitekin/reservationApi
+    image: hakanyalitekin/reservationApi
     build: 
       context: .
-      dockerfile: Services/ReservationAPI/Reservation.API/Dockerfile
+      dockerfile:  "Services/ReservationAPI/Reservation.API/Dockerfile"
     ports:
       - 9001:9001
     networks:
       - int_net
 
+
 networks:
-  int_net: #ContactApi ve ReservationApi'nin dýþ dünyaya açýk olmasýna gerek yok bundan sebet internel network oluþturuldu.
+  int_net: # ContactApi ve ReservationApi'nin dýþ dünyaya açýk olmasýna gerek yok bundan sebet internel network oluþturuldu.
     driver: overlay
     internal: true
   micro_net: #Dýþ dünyaya açýk olan ApiGetWay'in network'ü
